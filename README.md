@@ -81,3 +81,24 @@ cd Train
 ```
 
 Then, follow the instructions in the README.md file inside that directory to run the Training code.
+
+### Navigating through the Flask App
+
+#### Step 1: Upload Video
+
+![Upload Video](Images/UI-Instructions-1.png)
+
+- **Select Video File**: Click the "Choose File" button to select a video from your device.
+- **Submit for Detection**: Click the "Upload" button to submit the video for analysis.
+
+#### Step 2: View Results and Frames
+
+![View Results](Images/UI-Instructions-2.png)
+
+- **View Prediction Results**: The application displays whether the video is classified as a deepfake along with a confidence score.
+- **Use Slider to View Frames**: Navigate through the extracted frames using the slider below the results.
+
+## Features
+
+- **Interactive Frame Viewer**: Allows users to scroll through video frames using a slider.
+- **Near Real-time Results**: Infers and provides feedback from the model, with near real-time speed, on whether the uploaded video is a deepfake.
