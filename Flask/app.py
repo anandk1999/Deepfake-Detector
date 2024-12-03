@@ -1,5 +1,6 @@
 import os
 import sys
+import glob
 
 from flask import Flask, request, jsonify, render_template
 from utils import extract_frames, preprocess_frames
@@ -32,7 +33,13 @@ def upload_video():
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(filepath)
         result = analyze_video(filepath)
-        return render_template('result.html', result=result)
+        # Path to the directory containing frames
+        frame_dir = os.path.join('static', 'uploads', f"{file.filename.split('.mp4')[0]}_frames")
+        # Get list of frame file paths
+        frame_paths = sorted(glob.glob(os.path.join(frame_dir, 'frame_*.png'))[:FLAGS.num_frames])
+        # Convert frame paths to URLs
+        frame_urls = [f"/{path}" for path in frame_paths]
+        return render_template('result.html', result=result, frames=frame_urls, num_frames=len(frame_urls))
 
 def analyze_video(video_path):
     frames = extract_frames(video_path, )
