@@ -32,7 +32,7 @@ def upload_video():
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(filepath)
         result = analyze_video(filepath)
-        return jsonify(result)
+        return render_template('result.html', result=result)
 
 def analyze_video(video_path):
     frames = extract_frames(video_path, )
