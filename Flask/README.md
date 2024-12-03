@@ -9,7 +9,7 @@ unzip models/models.zip
 Then, to run the flask application, simply run this command in your terminal
 
 ```bash
-python3 app.py --num_frames=40
+python3 app.py --num_frames=20
 ```
 
 Use the videos in 'Test Data' directory from the root directory to upload into the Flask application to run the demo. 
