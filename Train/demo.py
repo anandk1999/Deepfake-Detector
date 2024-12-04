@@ -36,7 +36,7 @@ flags.DEFINE_string('output_dir', 'run1', 'Output Directory')
 flags.DEFINE_boolean('bi_lstm_bool', False, 'Use Bi-LSTM or Normal LSTM')
 flags.DEFINE_boolean('attention_bool', False, 'Use Attention or not')
 flags.DEFINE_integer('seq_length', 20, 'Video sequence length')
-flags.DEFINE_string('csv_file', './final_celeb_df', 'CSV of video files')
+flags.DEFINE_string('csv_file', './final_celeb_df2', 'CSV of video files')
 flags.DEFINE_string('base_dir', 'CELEB-DF-2', 'Folder of video frames')
 
 # Create a custom Dataset class
