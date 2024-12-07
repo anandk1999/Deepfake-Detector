@@ -62,7 +62,7 @@ cmake --version
 pip install -r requirements.txt
 ```
 
-### Instructions of Flask Application
+### Instructions for Flask Application
 
 To run the Flask demo application to test on a video, change directory into the Flask folder:
 
@@ -98,7 +98,13 @@ Then, follow the instructions in the README.md file inside that directory to run
 - **View Prediction Results**: The application displays whether the video is classified as a deepfake along with a confidence score.
 - **Use Slider to View Frames**: Navigate through the extracted frames using the slider below the results.
 
-## Features
+### Features
 
 - **Interactive Frame Viewer**: Allows users to scroll through video frames using a slider.
 - **Near Real-time Results**: Infers and provides feedback from the model, with near real-time speed, on whether the uploaded video is a deepfake.
+
+## Reference(s)
+
+```{=latex}
+Li, Y., et al. (2020). Celeb-DF: A Large-scale Challenging Dataset for DeepFake Forensics. IEEE CVPR.
+```
